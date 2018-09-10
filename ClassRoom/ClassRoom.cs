@@ -12,9 +12,15 @@ namespace ClassRoom
         public List<Student> ClassList { get; set; }
         public DateTime TermStart { get; set; }
 
-        public ClassRoom()
+        public ClassRoom(string className, DateTime termStart)
         {
-            
+            ClassName = className;
+            TermStart = termStart;
+        }
+
+        public void AddStudentToClass(Student student)
+        {
+            ClassList.Add(student);
         }
     }
 }
