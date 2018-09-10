@@ -16,6 +16,11 @@ namespace ClassRoom
         public Student(string name, int birthMonth, int birhDay)
         {
             Name = name;
+            if (birthMonth > 12 || birthMonth < 1)
+            {
+                Console.WriteLine($" ## You entered an invalid birthmonth for {name} - Changed to default (1) ## ");
+                birthMonth = 1;
+            }
             BirthMonth = birthMonth;
             BirthDay = birhDay;
             BirthSeason = GetBirthSeason();
